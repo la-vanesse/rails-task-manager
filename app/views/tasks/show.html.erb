@@ -1,0 +1,14 @@
+<h1>Task Name</h1>
+<%  if @task.completed == true %>
+    <p> <%= "This task is completed" %> </p>
+    <% else %>
+    <p> <%= "This task is not completed" %> </p>
+    <% end %>
+
+<p><%= @tasks.title %></p>
+<p><%= @tasks.details %></p>
+<p><%= @tasks.completed %></p>
+
+<%= link_to tasks_path do %>
+  <i class="fa fa-history"></i> Back to list
+<% end %>
