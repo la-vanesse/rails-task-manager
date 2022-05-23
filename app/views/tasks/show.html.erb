@@ -1,13 +1,15 @@
-<h1>Task Name</h1>
-<%  if @task.completed == true %>
-    <p> <%= "This task is completed" %> </p>
-    <% else %>
-    <p> <%= "This task is not completed" %> </p>
-    <% end %>
+<h1>Vanessa's Task Details</h1>
 
-<p><%= @tasks.title %></p>
-<p><%= @tasks.details %></p>
-<p><%= @tasks.completed %></p>
+<h2>Task: <%= @task.title %></h2>
+<p>details: <%= @task.details %></p>
+<p>completed: <%= @task.completed %></p>
+
+
+<%= link_to edit_task_path(@task) do %>
+  <button class = "btn btn-warning m-2">
+    <i class="fa-solid fa-file-pen"></i>EDIT
+  </button>
+<% end %>
 
 <%= link_to tasks_path do %>
   <i class="fa fa-history"></i> Back to list

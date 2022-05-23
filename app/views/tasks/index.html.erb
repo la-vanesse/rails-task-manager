@@ -1,7 +1,26 @@
-<h1>Ma To-Do List</h1>
+<h1>La To-Do List de Vanessa</h1>
 
 <ul>
   <% @tasks.each do |task| %>
     <li><%= link_to task.title, task_path(task) %></li>
   <% end %>
 </ul>
+
+
+<%= link_to tasks_path do %>
+  <button class= "btn btn-info m-2">
+    <i class="fa-solid fa-circle-arrow-left"></i> Back to list
+  </button>
+<% end %>
+<form class="simple_form new_task" id="new_task" novalidate="novalidate" action="/tasks" accept-charset="UTF-8" method="post">
+  <input type="hidden" name="authenticity_token" value="6mcCvU7ZazpIBcJTptw/8y4EucmzccFWli7tFUzX6IJEx8wq6PFC7m4rA1Jy+W4YW1hlhYhSOyhZefWtOM5ofQ==">
+  <div class="mb-3 string optional task_name">
+    <label class="string optional" for="task_name">Task Name</label>
+    <input class="form-control string optional" type="text" name="task[name]" id="task_name">
+  </div>
+  <div class="mb-3 string optional task_details">
+    <label class="string optional" for="task_details">Describe your task</label>
+    <input class="form-control string optional" type="text" name="task[details]" id="task_details">
+  </div>
+  <input type="submit" name="commit" value="Create Task" data-disable-with="Create Task">
+</form

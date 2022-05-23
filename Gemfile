@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'font-awesome-sass', '~> 6.1.1'
-gem 'simple_form'
+gem 'simple_form', github: 'heartcombo/simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

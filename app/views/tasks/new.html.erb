@@ -1,14 +1,6 @@
-<h1>Ma To-Do List</h1>
+<h1>La To-Do List de Vanessa</h1>
 
-<%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.label :completed %>
-  <%= f.check_box :completed %>
-  <%= f.submit %>
-<% end %>
+<%= render "form", task: @task %>
 
 <%= link_to tasks_path do %>
   <i class="fa fa-history"></i> Back to list
